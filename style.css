@@ -1,4 +1,32 @@
-text-align: center;
+:root {
+    --text-color: #DBE4EF;
+    --card-front-color: #144480;
+    --card-back-color: #00F4BF;
+}
+
+body {
+    background: url('img/bg-desktop.webp');
+    font-family: Bai Jamjuree;
+}
+
+#container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.cartao {
+    margin: 1rem 1rem;
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+}
+
+.cartao__conteudo {
+    background-color: var(--card-front-color);
+    text-align: center;
     /* background-color: aquamarine; */
     height: 100%;
     transform-style: preserve-3d;
@@ -33,7 +61,7 @@ text-align: center;
     font-weight: 700;
 }
 
-.cartao.active .cartao__conteudo {
+.cartao:hover .cartao__conteudo {
     transform: rotateY(180deg);
 }
 
@@ -74,5 +102,3 @@ footer p {
     font-size: 0.6rem;
     margin-top: 0.5rem;
 }
-
-
